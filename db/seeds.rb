@@ -62,3 +62,19 @@ movie_5 = {
 end
 
 puts "#{Movie.count} in total - Creation completed"
+
+# list generator
+
+genres = ["Classic movie", "Superhero", "Drama", "Science-Fiction", "Fantasy", "Action", "Horror"]
+
+puts "Cleaning list database..."
+List.destroy_all
+
+puts "Creating lists..."
+
+genres.each do |list|
+  List.create(name: list)
+  puts "Creating #{List.name}"
+end
+
+puts "#{List.count} in total - Creation completed"
