@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  has_many :bookmarks, dependent: :restrict_with_exception
+  has_many :bookmarks
 
-  validates :title, :comment, presence: true, uniqueness: true
+  validates :title, :overview, presence: true, uniqueness: true
 end
