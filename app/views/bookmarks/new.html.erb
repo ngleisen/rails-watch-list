@@ -1,10 +1,20 @@
-<h1>Add a movie on our "<%= @list.name %>" list</h1>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1543536448-1e76fc2795bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1678&q=80)">
+</div>
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :movie, collection: Movie.all %>
-  <%= f.input :comment %>
-    <%# <%= f.association :tag %>
-    <%= f.submit "Add movie", class: 'btn btn-primary' %>
-<% end %>
+<div class="container my-4">
+  <div class="row">
+    <h1>Add a movie on our "<%= @list.name %>" list</h1>
+    <p>Fulfill the information from the form:</p>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.input :movie, collection: Movie.all %>
+        <%= f.input :comment %>
+          <%# <%= f.association :tag %>
+          <%= f.submit "Add movie", class: 'btn btn-flat' %>
+      <% end %>
+      <div class ="mt-4" id="back">
+        <%= link_to "Back to our list", list_path(@list), class: "text-reset text-decoration-none" %>
+      </div>
 
-<%= link_to "Back to our list", list_path(@list) %>
+    </div>
+  </div>
+</div>

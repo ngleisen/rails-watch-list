@@ -19,7 +19,7 @@ movie = JSON.parse(movie_serialized)
 puts "Cleaning database..."
 Movie.destroy_all
 
-puts "Creating 5 movie..."
+puts "Creating 10 movie..."
 
 movie_1 = {
   title: "#{movie["results"][0]["original_title"]}",
@@ -56,7 +56,44 @@ movie_5 = {
   rating: "#{movie["results"][5]["vote_average"]}".to_i
 }
 
-[movie_1, movie_2, movie_3, movie_4, movie_5].each do |attributes|
+movie_6 = {
+  title: "#{movie["results"][6]["original_title"]}",
+  overview: "#{movie["results"][6]["overview"]}",
+  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][6]["poster_path"]}",
+  rating: "#{movie["results"][6]["vote_average"]}".to_i
+}
+
+movie_7 = {
+  title: "#{movie["results"][7]["original_title"]}",
+  overview: "#{movie["results"][7]["overview"]}",
+  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][7]["poster_path"]}",
+  rating: "#{movie["results"][7]["vote_average"]}".to_i
+}
+
+movie_8 = {
+  title: "#{movie["results"][8]["original_title"]}",
+  overview: "#{movie["results"][8]["overview"]}",
+  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][8]["poster_path"]}",
+  rating: "#{movie["results"][8]["vote_average"]}".to_i
+}
+
+movie_9 = {
+  title: "#{movie["results"][9]["original_title"]}",
+  overview: "#{movie["results"][9]["overview"]}",
+  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][9]["poster_path"]}",
+  rating: "#{movie["results"][9]["vote_average"]}".to_i
+}
+
+movie_10 = {
+  title: "#{movie["results"][10]["original_title"]}",
+  overview: "#{movie["results"][10]["overview"]}",
+  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][10]["poster_path"]}",
+  rating: "#{movie["results"][10]["vote_average"]}".to_i
+}
+
+movies = [movie_1, movie_2, movie_3, movie_4, movie_5, movie_6, movie_7, movie_8, movie_9, movie_10]
+
+movies.each do |attributes|
   movie = Movie.create!(attributes)
   puts "Created #{movie.title}"
 end
@@ -65,12 +102,12 @@ puts "#{Movie.count} in total - Creation completed"
 
 # list generator
 
-genres = ["Classic movie", "Superhero", "Drama", "Science-Fiction", "Fantasy", "Action", "Horror"]
+genres = ["Classics", "Superhero", "Drama", "Science-Fiction", "Fantasy", "Action", "Horror"]
 
-puts "Cleaning list database..."
+puts 'Cleaning list database...'
 List.destroy_all
 
-puts "Creating lists..."
+puts 'Creating lists...'
 
 genres.each do |list|
   List.create(name: list)

@@ -1,8 +1,16 @@
-<h1>New List</h1>
-<p>Fulfill the information from the form:</p>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80)">
+  <%= @list.name %>
+</div>
 
-  <%= simple_form_for @list do |f| %>
-    <%= f.input :name %>
-    <%= f.submit %>
-  <% end %>
+<div class="container my-4">
+  <div class="row">
+    <h1>New List</h1>
+    <p>Fulfill the information from the form:</p>
+
+      <%= simple_form_for @list do |f| %>
+        <%= f.input :name %>
+        <%= f.submit class: 'btn btn-flat'%>
+      <% end %>
+    </div>
+  </div>
 </div>

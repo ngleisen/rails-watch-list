@@ -3,19 +3,17 @@
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="cards">
-        <div class="card-category">
-          <h4 >Choose from <br>the existing lists:</h4>
-        </div>
-      <% @lists.each do |list| %>
-          <div class="card-category">
-            <%= link_to list.name, list_path(list) %>
-          </div>
-      <% end %>
+  <h4 class="text-center my-4">Choose from the existing lists:</h4>
+    <div class="row">
+      <div class="col">
+        <div class="cards">
+        <% @lists.each do |list| %>
+            <div class="card-category">
+              <%= link_to list.name, list_path(list) %>
+            </div>
+        <% end %>
 
+        </div>
       </div>
     </div>
-  </div>
 </div>

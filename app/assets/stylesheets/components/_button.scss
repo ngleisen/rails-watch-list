@@ -2,21 +2,42 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #e9a21f;
+  background: rgb(190, 15, 15);
   transition: background 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+    color: white;
+    background: rgb(48, 180, 15);
+  }
 }
 
 .btn-ghost {
-  color: rgb(190, 15, 15);
-  border: 2px solid rgb(190, 15, 15);;
-  padding: 8px 16px;
+  color: white;
+  border: 2px solid white;
+  padding: 4px 12px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
   transition: opacity 0.3s ease;
 
   &:hover {
     opacity: 1;
-    color: rgb(48, 180, 15);
+    color: white;
+    background-color: rgb(48, 180, 15);
+  }
+}
+
+.btn-red {
+  color: rgb(190, 15, 15);
+  border: 2px solid rgb(190, 15, 15);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+    color: white;
+    background-color: rgb(48, 180, 15);
   }
 }
