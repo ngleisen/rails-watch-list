@@ -43,10 +43,10 @@ movie_3 = {
 }
 
 movie_4 = {
-  title: "#{movie["results"][3]["original_title"]}",
-  overview: "#{movie["results"][3]["overview"]}",
-  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][3]["poster_path"]}",
-  rating: "#{movie["results"][3]["vote_average"]}".to_i
+  title: "#{movie["results"][4]["original_title"]}",
+  overview: "#{movie["results"][4]["overview"]}",
+  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][4]["poster_path"]}",
+  rating: "#{movie["results"][4]["vote_average"]}".to_i
 }
 
 movie_5 = {
@@ -57,10 +57,10 @@ movie_5 = {
 }
 
 movie_6 = {
-  title: "#{movie["results"][6]["original_title"]}",
-  overview: "#{movie["results"][6]["overview"]}",
-  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][6]["poster_path"]}",
-  rating: "#{movie["results"][6]["vote_average"]}".to_i
+  title: "#{movie["results"][11]["original_title"]}",
+  overview: "#{movie["results"][11]["overview"]}",
+  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][11]["poster_path"]}",
+  rating: "#{movie["results"][11]["vote_average"]}".to_i
 }
 
 movie_7 = {
@@ -71,17 +71,17 @@ movie_7 = {
 }
 
 movie_8 = {
-  title: "#{movie["results"][8]["original_title"]}",
-  overview: "#{movie["results"][8]["overview"]}",
-  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][8]["poster_path"]}",
-  rating: "#{movie["results"][8]["vote_average"]}".to_i
+  title: "#{movie["results"][12]["original_title"]}",
+  overview: "#{movie["results"][12]["overview"]}",
+  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][12]["poster_path"]}",
+  rating: "#{movie["results"][12]["vote_average"]}".to_i
 }
 
 movie_9 = {
-  title: "#{movie["results"][9]["original_title"]}",
-  overview: "#{movie["results"][9]["overview"]}",
-  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][9]["poster_path"]}",
-  rating: "#{movie["results"][9]["vote_average"]}".to_i
+  title: "#{movie["results"][14]["original_title"]}",
+  overview: "#{movie["results"][14]["overview"]}",
+  poster_url: "https://image.tmdb.org/t/p/original#{movie["results"][14]["poster_path"]}",
+  rating: "#{movie["results"][14]["vote_average"]}".to_i
 }
 
 movie_10 = {

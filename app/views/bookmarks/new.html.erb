@@ -6,7 +6,7 @@
     <h1>Add a movie on our "<%= @list.name %>" list</h1>
     <p>Fulfill the information from the form:</p>
       <%= simple_form_for [@list, @bookmark] do |f| %>
-        <%= f.input :movie, collection: Movie.all %>
+        <%= f.association :movie, collection: Movie.all.order(:title), input_html: {data: { controller: "tom-select"}} %>
         <%= f.input :comment %>
           <%# <%= f.association :tag %>
           <%= f.submit "Add movie", class: 'btn btn-flat' %>

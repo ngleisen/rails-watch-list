@@ -7,7 +7,6 @@ export default class extends Controller {
     new Typed(this.element, {
       strings: ["Manage your own lists of movies..", "And never forget them!"],
       typeSpeed: 50,
-      loop: true
     })
   }
 }
