@@ -10,6 +10,9 @@
     <div class="col-3">
       <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-red" %>
     </div>
+        <div class="col-3">
+      <%= link_to "Delete this list", list_path(@list), class: "btn btn-red", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete the #{@list.name} list?" } %>
+    </div>
     <div class="col-12 my-4">
       <% @list.movies.each do |movie|  %>
         <div class="card-product">
@@ -49,7 +52,7 @@
       <h3>Add a review:</h3>
       <%= simple_form_for [@list, @review] do |f| %>
         <%= f.input :comment %>
-        <%= f.input :rating, as: :select, collection: (1..5).to_a, required: true, label: "Rate it:", input_html: { data: { controller: "star-rating" } } %>
+        <%= f.input :rating, collection: (1..5).to_a, label: "Rate this list", input_html: {data: {controller: "star-rating"}} %>
         <%= f.submit "Validate the review", class:"btn btn-flat" %>
       <% end %>
     </div>
